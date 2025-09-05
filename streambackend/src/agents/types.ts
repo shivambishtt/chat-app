@@ -13,3 +13,11 @@ export enum AgentPlatform {
     openAI = "openai",
     writingAssistant = "writingassistant"
 }
+
+export interface WritingMessage {
+    custom?: {
+        suggestions?: string[],
+        writingTasks?: string,
+        messageType?: "user_input" | "ai_response" | "system_message"
+    }
+}
